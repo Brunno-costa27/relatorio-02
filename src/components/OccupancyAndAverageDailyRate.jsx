@@ -1,16 +1,19 @@
 import { AiOutlineDeploymentUnit } from "react-icons/ai";
 import { BsCalendar4 } from "react-icons/bs";
-import { obterDiaSemana, formatNumber } from '../functions/functions'
-import 'moment/locale/pt-br';
+import { formatNumber } from '../functions/functions'
 import moment from 'moment';
+import 'moment/locale/pt-br';
 
 export function OccupancyAndAverageDailyRate({ periodReport, periodAvg }) {
     const occupationDailyAvg = Object.entries(periodReport[0]).map((chave, valor) => {
-
+        
         return chave
-    });
+        });
+    moment.locale('pt-br'); // Configura o locale para pt-br
 
-    moment.locale('pt-br')
+    const formatDate = moment("2024-05-26").format('ddd DD/MM/YYYY');
+    console.log(formatDate)
+
     return (
 
         <>
@@ -39,7 +42,7 @@ export function OccupancyAndAverageDailyRate({ periodReport, periodAvg }) {
                                 <td className="w-full text-left font-bold border-y border-b-0 border-gray-200 px-4 py-2">
                                     <div className="flex justify-start items-center gap-1">
                                         <BsCalendar4 size={15} />
-                                        <p>{moment(item[0]).format('ddd DD/MM/YYYY')} {moment.locale()}</p>
+                                        <p>{moment(item[0]).format('ddd DD/MM/YYYY')}</p>
                                     </div>
                                 </td>
                                 <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{item[1].occp.toFixed(0)}%</td>

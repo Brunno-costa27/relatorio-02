@@ -7,17 +7,12 @@ import { IoCardOutline } from "react-icons/io5";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { formatNumber } from '../functions/functions'
 import { BsArrow90DegLeft } from "react-icons/bs";
-import 'moment/locale/pt-br';
 import moment from 'moment';
+import 'moment/locale/pt-br';
 
 
 export function DetailedStatement({ bookings }) {
 
-    // bookings.forEach(element => {
-    //     // console.log(element.values.bill[0])  
-    //     console.log(element)  
-    // console.log(bookings);
-    // });
     return (
 
         <>
@@ -29,7 +24,7 @@ export function DetailedStatement({ bookings }) {
             {
                 bookings.map((item) =>
                     <>
-                        <div className="flex font-sans justify-between py-4 items-center" key={item.bill.reservation?.id}>
+                        <div className="flex justify-between py-4 items-center" key={item.bill.reservation?.id}>
 
                             <div className="w-3/4 text-xs" key={item.bill.reservation?.id}>
                                 <p className="font-extrabold">Reserva: #{item.bill.reservation?.id}</p>

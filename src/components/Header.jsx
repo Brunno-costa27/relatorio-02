@@ -2,12 +2,14 @@ import { TbReport } from "react-icons/tb";
 import { FaRegUser } from "react-icons/fa6";
 import { BsArrowRight } from "react-icons/bs";
 import { BsCalendar4 } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
-export function Header() {
+
+export function Header({t, language}) {
 
     return (
 
-        <header className="font-sans mb-12">
+        <header className="mb-12">
             <div className="mb-10">
                 <img className="w-[20%]" src="http://www.hotelpetropolisinn.com.br/images/hpi-right.svg" alt="Hotel petropolis inn" />
             </div>
@@ -16,7 +18,7 @@ export function Header() {
                 <div className="flex flex-col">
                     <div className="flex justify-start items-center gap-2">
                         <TbReport size={30}/>
-                        <p className="text-2xl ">Fechamento</p>
+                        <p className="text-2xl">{t('header.closing')}</p>
                     </div>
 
                     <div className="flex justify-start items-start gap-2">

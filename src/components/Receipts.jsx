@@ -1,14 +1,14 @@
 import { AiOutlineBars } from "react-icons/ai";
 import { formatNumber } from "../functions/functions"
 
-export function Receipts({financial}){
+export function Receipts({t, language, financial}){
 
     return(
 
         <>
             <div className="flex justify-start items-start gap-2 py-2">
             <AiOutlineBars size={35}/>
-                <h1 className="text-3xl">Recebimentos</h1>
+                <h1 className="text-3xl">{t('receipts.receipts')}</h1>
             </div>
 
             <table className="table-fixed flex flex-col">

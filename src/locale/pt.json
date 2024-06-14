@@ -1,0 +1,12 @@
+{
+    "translation": {
+        "header": {
+            "closing": "Fechamento",
+            "period": "Período",
+            "method": "Método"
+        },
+        "receipts": {
+            "receipts": "Recebimentos" 
+        }
+    }
+}
