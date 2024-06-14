@@ -3,9 +3,12 @@ import { FaRegUser } from "react-icons/fa6";
 import { BsArrowRight } from "react-icons/bs";
 import { BsCalendar4 } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
-
+import moment from 'moment'
+import 'moment/dist/locale/pt-br'
 
 export function Header({t, language}) {
+
+    moment.locale(language)
 
     return (
 
@@ -22,9 +25,9 @@ export function Header({t, language}) {
                     </div>
 
                     <div className="flex justify-start items-start gap-2">
-                        <p className="text-2xl ">26/05/2024</p>
+                        <p className="text-2xl ">{moment('2024-05-26').format('l')}</p>
                             <BsArrowRight size={30}/>
-                        <p className="text-2xl ">31/05/2024</p>
+                        <p className="text-2xl ">{moment('2024-05-31').format('l')}</p>
                     </div>
                 </div>
 
@@ -36,7 +39,7 @@ export function Header({t, language}) {
 
                     <div className="flex justify-start items-center gap-2">
                     <BsCalendar4 size={18}/>
-                    <p className="text-xl">10/06/2024 20:16</p>
+                    <p className="text-xl">{moment('2024-06-10').format('l')} {moment().format('LT')}</p>
                     </div>
                 </div>
             </div>

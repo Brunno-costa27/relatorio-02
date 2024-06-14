@@ -1,16 +1,89 @@
-  
 {
-    "translation": {
+  "translation": {
+    "header": {
+      "closing": "Closing"
+    },
+    "receipts": {
+      "receipts": "Receipts",
+      "header": {
+        "type": "Type",
+        "value": "Valeu",
+        "devolution": "Devolution",
+        "financial": "Financial"
+      },
+      "type": {
+        "deposit": "Deposit",
+        "creditCard": "Credit Card",
+        "money": "Money",
+        "debitCard": "Debit Card",
+        "ticket": "Ticket",
+        "voucher": "Voucher",
+        "total": "total"
+      },
+      "value": {
+        "deposit": "$ {{value}}",
+        "creditCard": "$ {{value}}",
+        "money": "$ {{value}}",
+        "debitCard": "$ {{value}}",
+        "ticket": "$ {{value}}",
+        "voucher": "$ {{value}}",
+        "total": "$ {{value}}"
+      },
+      "devolution": {
+        "deposit": "$ {{value}}",
+        "creditCard": "$ {{value}}",
+        "money": "$ {{value}}",
+        "debitCard": "$ {{value}}",
+        "ticket": "$ {{value}}",
+        "voucher": "$ {{value}}",
+        "total": "$ {{value}}"
+      },
+      "financial": {
+        "deposit": "$ {{value}}",
+        "creditCard": "$ {{value}}",
+        "money": "$ {{value}}",
+        "debitCard": "$ {{value}}",
+        "ticket": "$ {{value}}",
+        "voucher": "$ {{value}}",
+        "total": "$ {{value}}"
+      }
+    },
+    "occupationAndAverageDailyRate": {
+      "averageDailyRate": {
+        "value": "$ {{value}}"
+      },
+      "periodAverage": {
+        "average": "Period Average",
+        "value": "$ {{value}}"
+      }
+    },
+    "expenses": {
+        "expenses": "Expenses",
         "header": {
-            "closing": "Closing"
+            "type": "Type",
+            "total": "Total"
         },
-        "receipts": {
-            "receipts": "Receipts" 
+        "types": {
+            "ticket": "Ticket",
+            "money": "Money",
+            "total": "Total",
+            "value":"$ {{value}}"
         }
-        
-        
-        
-        
-        
+    },
+    "sales": {
+        "title": "Sales",
+        "header": {
+            "type": "Type",
+            "value": "Valeu",
+            "devolution": "Devolution"            
+        },
+        "types": {
+            "products": "Products",
+            "services": "Services",
+            "total": "total",
+            "value":"$ {{value}}"
+        }
     }
+
+  }
 }

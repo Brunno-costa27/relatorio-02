@@ -2,16 +2,21 @@ import { AiOutlineDeploymentUnit } from "react-icons/ai";
 import { BsCalendar4 } from "react-icons/bs";
 import { formatNumber } from '../functions/functions'
 import moment from 'moment';
-import 'moment/locale/pt-br';
+import 'moment/dist/locale/pt-br'
 
-export function OccupancyAndAverageDailyRate({ periodReport, periodAvg }) {
+
+export function OccupancyAndAverageDailyRate({t, language, periodReport, periodAvg }) {
+
+    moment.locale(language)
     const occupationDailyAvg = Object.entries(periodReport[0]).map((chave, valor) => {
         
         return chave
-        });
-    moment.locale('pt-br'); // Configura o locale para pt-br
+    });
+    // moment.locale('pt-BR'); // Configura o locale para pt-br
+    // moment.locale('en-US'); // Configura o locale para pt-br
 
-    const formatDate = moment("2024-05-26").format('ddd DD/MM/YYYY');
+
+    const formatDate = moment("2024-05-26").format('ddd l');
     console.log(formatDate)
 
     return (
@@ -42,11 +47,13 @@ export function OccupancyAndAverageDailyRate({ periodReport, periodAvg }) {
                                 <td className="w-full text-left font-bold border-y border-b-0 border-gray-200 px-4 py-2">
                                     <div className="flex justify-start items-center gap-1">
                                         <BsCalendar4 size={15} />
-                                        <p>{moment(item[0]).format('ddd DD/MM/YYYY')}</p>
+                                        <p>{moment(item[0]).format('ddd l')}</p>
                                     </div>
                                 </td>
                                 <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{item[1].occp.toFixed(0)}%</td>
-                                <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">R$ {formatNumber(item[1].avg)}</td>
+                                <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('occupationAndAverageDailyRate.averageDailyRate.value', {
+                                    value: formatNumber(item[1].avg)
+                                })}</td>
 
                             </tr>
                         </>
@@ -111,10 +118,12 @@ export function OccupancyAndAverageDailyRate({ periodReport, periodAvg }) {
 
                     <tr className="w-full flex text-center">
                         <td className="w-full text-left text-xs font-extrabold border-y border-b-0 border-gray-200 px-4 py-2">
-                            Média do Período
+                            {t('occupationAndAverageDailyRate.periodAverage.average')}
                         </td>
                         <td className="w-full text-center font-bold border-y border-b-0 border-gray-200 px-4 py-2">{periodAvg.occpAvg.toFixed(0)}%</td>
-                        <td className="w-full text-center border-y font-bold border-b-0 border-gray-200 px-4 py-2">R$ {formatNumber(periodAvg.periodRateAvg)}</td>
+                        <td className="w-full text-center border-y font-bold border-b-0 border-gray-200 px-4 py-2">{t('occupationAndAverageDailyRate.periodAverage.value', {
+                            value: formatNumber(periodAvg.periodRateAvg)
+                        })}</td>
 
                     </tr>
 

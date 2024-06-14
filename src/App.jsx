@@ -13,6 +13,7 @@ import i18n from '../src/lib/translation'
 import moment from 'moment';
 import 'moment/locale/pt-br';
 
+
 function App() {
 
   const financial = data.financial
@@ -26,22 +27,19 @@ function App() {
   const bookings = data.financial.extract
 
   const { t, i18n: { changeLanguage, language }, } = useTranslation()
-  console.log(language);
 
   const [currentLanguage, setCurrentLanguage] = useState(language)
 
 
   function handleChangeLanguage() {
-    const newLanguage = currentLanguage === 'en' ? 'pt' : 'en'
+    const newLanguage = currentLanguage === 'en-US' ? 'pt-br' : 'en-US'
 
     changeLanguage(newLanguage)
     setCurrentLanguage(newLanguage)
   }
 
-  useEffect(() => {
-    moment.locale('pt-br'); // Configura o locale para pt-br
+    moment.locale(language); // Configura o locale para pt-br
     console.log('Locale atual:', moment.locale()); // Deve mostrar 'pt-br'
-  }, []);
 
 
 
@@ -54,9 +52,9 @@ function App() {
       </div>
       <Header t={t} language={language}/>
       <Receipts t={t} language={language} financial={financial} />
-      <OccupancyAndAverageDailyRate periodReport={periodReport} periodAvg={periodAvg} />
-      <Outlay spending={spending} />
-      <Sales commerce={commerce} />
+      <OccupancyAndAverageDailyRate t={t} language={language} periodReport={periodReport} periodAvg={periodAvg} />
+      <Outlay t={t} language={language}  spending={spending} />
+      <Sales t={t} language={language}  commerce={commerce} />
       <DetailedStatement bookings={bookings} />
     </>
   )

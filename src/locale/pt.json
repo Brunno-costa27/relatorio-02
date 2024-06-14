@@ -1,12 +1,91 @@
 {
-    "translation": {
+  "translation": {
+    "header": {
+      "closing": "Fechamento",
+      "period": "Período",
+      "method": "Método"
+    },
+    "receipts": {
+      "receipts": "Recebimentos",
+      "header": {
+        "type": "Tipo",
+        "value": "Valor",
+        "devolution": "Devolução",
+        "financial": "Financeiro"
+      },
+      "type": {
+        "deposit": "Depósito",
+        "creditCard": "Cartão de crédito",
+        "money": "Dinheiro",
+        "debitCard": "Cartão de Débito",
+        "ticket": "Boleto",
+        "voucher": "Voucher",
+        "total": "total"
+      },
+      "value": {
+        "deposit": "R$ {{value}}",
+        "creditCard": "R$ {{value}}",
+        "money": "R$ {{value}}",
+        "debitCard": "R$ {{value}}",
+        "ticket": "R$ {{value}}",
+        "voucher": "R$ {{value}}",
+        "total": "R$ {{value}}"
+      },
+      "devolution": {
+        "deposit": "R$ {{value}}",
+        "creditCard": "R$ {{value}}",
+        "money": "R$ {{value}}",
+        "debitCard": "R$ {{value}}",
+        "ticket": "R$ {{value}}",
+        "voucher": "R$ {{value}}",
+        "total": "R$ {{value}}"
+      },
+      "financial": {
+        "deposit": "R$ {{value}}",
+        "creditCard": "R$ {{value}}",
+        "money": "R$ {{value}}",
+        "debitCard": "R$ {{value}}",
+        "ticket": "R$ {{value}}",
+        "voucher": "R$ {{value}}",
+        "total": "R$ {{value}}"
+      }
+    },
+    "occupationAndAverageDailyRate": {
+      "averageDailyRate": {
+          "value": "R$ {{value}}"
+      },
+      "periodAverage": {
+            "average": "Média do Período",
+            "value":"R$ {{value}}"
+        }
+  },
+  "expenses": {
+        "expenses": "Gastos",
         "header": {
-            "closing": "Fechamento",
-            "period": "Período",
-            "method": "Método"
+            "type": "Tipo",
+            "total": "Total"
         },
-        "receipts": {
-            "receipts": "Recebimentos" 
+        "types": {
+            "ticket": "Boleto",
+            "money": "Dinheiro",
+            "total": "Total",
+            "value":"R$ {{value}}"
+        }
+    },
+    "sales": {
+      "title": "Sales",
+        "header": {
+            "type": "Tipo",
+            "value": "Valor",
+            "devolution": "Devolução"            
+        },
+        "types": {
+            "products": "Produtos",
+            "services": "Serviços",
+            "total": "total",
+            "value":"R$ {{value}}"
         }
     }
+  }
+  
 }
