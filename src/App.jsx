@@ -41,6 +41,17 @@ function App() {
     moment.locale(language); // Configura o locale para pt-br
     console.log('Locale atual:', moment.locale()); // Deve mostrar 'pt-br'
 
+    let currency = ''
+
+    if (language === 'en-US') {
+        currency = 'USD'
+
+    } else if (language === 'pt-br') {
+        currency = 'BRL'
+        
+
+    }
+
 
 
   return (
@@ -51,10 +62,10 @@ function App() {
         </button>
       </div>
       <Header t={t} language={language}/>
-      <Receipts t={t} language={language} financial={financial} />
-      <OccupancyAndAverageDailyRate t={t} language={language} periodReport={periodReport} periodAvg={periodAvg} />
-      <Outlay t={t} language={language}  spending={spending} />
-      <Sales t={t} language={language}  commerce={commerce} />
+      <Receipts t={t} language={language} currency={currency} financial={financial} />
+      <OccupancyAndAverageDailyRate t={t} language={language} currency={currency} periodReport={periodReport} periodAvg={periodAvg} />
+      <Outlay t={t} language={language} currency={currency}  spending={spending} />
+      <Sales t={t} language={language} currency={currency} commerce={commerce} />
       <DetailedStatement t={t} language={language} bookings={bookings} />
     </>
   )

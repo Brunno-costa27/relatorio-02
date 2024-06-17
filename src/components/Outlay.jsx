@@ -1,9 +1,9 @@
 import { AiOutlineDeploymentUnit } from "react-icons/ai";
 // import { BsCalendar4 } from "react-icons/bs";
-import { formatNumber, sum } from '../functions/functions'
+import { formatNumber, sum, formatNumberByLanguage } from '../functions/functions'
 
 
-export function Outlay({t, language, spending}){
+export function Outlay({t, language, currency, spending}){
 
     return (
 
@@ -29,7 +29,7 @@ export function Outlay({t, language, spending}){
                             </div>
                         </td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('expenses.types.value', {
-                            value: formatNumber(spending.boleto)
+                            value: formatNumberByLanguage(spending.boleto, currency, language)
                         })}</td>
                     </tr>
                     <tr className="w-full flex text-center">
@@ -39,7 +39,7 @@ export function Outlay({t, language, spending}){
                             </div>
                         </td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('expenses.types.value', {
-                            value: formatNumber(spending.cash)
+                            value: formatNumberByLanguage(spending.cash, currency, language)
                         })}</td>
                     </tr>
                     <tr className="w-full flex text-center">
@@ -49,7 +49,7 @@ export function Outlay({t, language, spending}){
                             </div>
                         </td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('expenses.types.value', {
-                            value: formatNumber(sum(spending.boleto, spending.cash))
+                            value: formatNumberByLanguage(sum(spending.boleto, spending.cash), currency, language)
                         })}</td>
                     </tr>
                    

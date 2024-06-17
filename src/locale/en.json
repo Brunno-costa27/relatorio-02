@@ -21,31 +21,31 @@
         "total": "total"
       },
       "value": {
-        "deposit": "$ {{value}}",
-        "creditCard": "$ {{value}}",
-        "money": "$ {{value}}",
-        "debitCard": "$ {{value}}",
-        "ticket": "$ {{value}}",
-        "voucher": "$ {{value}}",
-        "total": "$ {{value}}"
+        "deposit": " {{value}}",
+        "creditCard": " {{value}}",
+        "money": " {{value}}",
+        "debitCard": " {{value}}",
+        "ticket": " {{value}}",
+        "voucher": " {{value}}",
+        "total": " {{value}}"
       },
       "devolution": {
-        "deposit": "$ {{value}}",
-        "creditCard": "$ {{value}}",
-        "money": "$ {{value}}",
-        "debitCard": "$ {{value}}",
-        "ticket": "$ {{value}}",
-        "voucher": "$ {{value}}",
-        "total": "$ {{value}}"
+        "deposit": " {{value}}",
+        "creditCard": " {{value}}",
+        "money": " {{value}}",
+        "debitCard": " {{value}}",
+        "ticket": " {{value}}",
+        "voucher": " {{value}}",
+        "total": " {{value}}"
       },
       "financial": {
-        "deposit": "$ {{value}}",
-        "creditCard": "$ {{value}}",
-        "money": "$ {{value}}",
-        "debitCard": "$ {{value}}",
-        "ticket": "$ {{value}}",
-        "voucher": "$ {{value}}",
-        "total": "$ {{value}}"
+        "deposit": " {{value}}",
+        "creditCard": " {{value}}",
+        "money": " {{value}}",
+        "debitCard": " {{value}}",
+        "ticket": " {{value}}",
+        "voucher": " {{value}}",
+        "total": " {{value}}"
       }
     },
     "occupationAndAverageDailyRate": {
@@ -57,11 +57,11 @@
 
       },
       "averageDailyRate": {
-        "value": "$ {{value}}"
+        "value": " {{value}}"
       },
       "periodAverage": {
         "average": "Period Average",
-        "value": "$ {{value}}"
+        "value": " {{value}}"
       }
     },
     "expenses": {
@@ -74,7 +74,7 @@
             "ticket": "Ticket",
             "money": "Money",
             "total": "Total",
-            "value":"$ {{value}}"
+            "value":" {{value}}"
         }
     },
     "sales": {
@@ -88,7 +88,7 @@
             "products": "Products",
             "services": "Services",
             "total": "total",
-            "value":"$ {{value}}"
+            "value":" {{value}}"
         }
     },
     "detailedStatement": {

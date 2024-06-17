@@ -5,21 +5,21 @@ import { formatNumber, sum, formatNumberByLanguage } from "../functions/function
 import moment from 'moment';
 
 
-export function Sales({t, language, commerce}) {
+export function Sales({t, language, currency, commerce}) {
 
     
     // Teste
-    let number = 20
-    console.log(language);
-    if (language === 'en-US') {
-        let currency = 'USD'
-        console.log(formatNumberByLanguage(number, currency, language))
+    // let number = 20
+    // console.log(language);
+    // if (language === 'en-US') {
+    //     let currency = 'USD'
+    //     console.log(formatNumberByLanguage(number, currency, language))
 
-    } else if (language === 'pt-br') {
-        let currency = 'BRL'
-        console.log(formatNumberByLanguage(number, currency, language))
+    // } else if (language === 'pt-br') {
+    //     let currency = 'BRL'
+    //     console.log(formatNumberByLanguage(number, currency, language))
 
-    }
+    // }
       
 
     return (
@@ -48,10 +48,10 @@ export function Sales({t, language, commerce}) {
                             </div>
                         </td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('sales.types.value', {
-                            value: formatNumber(commerce.products.sold)
+                            value: formatNumberByLanguage(commerce.products.sold, currency, language)
                         })}</td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('sales.types.value', {
-                            value: formatNumber(commerce.products.cancelled)
+                            value: formatNumberByLanguage(commerce.products.cancelled, currency, language)
                         })}</td>
 
                     </tr>
@@ -62,10 +62,10 @@ export function Sales({t, language, commerce}) {
                             </div>
                         </td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('sales.types.value', {
-                            value: formatNumber(commerce.services.sold)
+                            value: formatNumberByLanguage(commerce.services.sold, currency, language)
                         })}</td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('sales.types.value', {
-                            value: formatNumber(commerce.services.cancelled)
+                            value: formatNumberByLanguage(commerce.services.cancelled, currency, language)
                         })}</td>
 
                     </tr>
@@ -76,10 +76,10 @@ export function Sales({t, language, commerce}) {
                             </div>
                         </td>
                         <td className="w-full text-center border-y border-b-0 border-gray-200 px-4 py-2">{t('sales.types.value', {
-                            value: formatNumber(sum(commerce.products.sold,commerce.services.sold))
+                            value: formatNumberByLanguage(sum(commerce.products.sold,commerce.services.sold), currency, language)
                         })}</td>
                         <td className="w-full text-center border-y bor  der-b-0 border-gray-200 px-4 py-2">{t('sales.types.value', {
-                            value: formatNumber(sum(commerce.products.cancelled,commerce.services.cancelled))
+                            value: formatNumberByLanguage(sum(commerce.products.cancelled,commerce.services.cancelled), currency, language)
                         })}</td>
 
                     </tr>
