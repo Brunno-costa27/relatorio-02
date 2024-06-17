@@ -51,6 +51,13 @@
       }
     },
     "occupationAndAverageDailyRate": {
+      "title": "occupation And Average Daily Rate",
+      "header": {
+        "date": "Data",
+        "occupation": "Ocupação",
+        "averageDailyRate": "Diária Média"
+
+      },
       "averageDailyRate": {
           "value": "R$ {{value}}"
       },
@@ -73,7 +80,7 @@
         }
     },
     "sales": {
-      "title": "Sales",
+      "title": "Vendas",
         "header": {
             "type": "Tipo",
             "value": "Valor",
@@ -85,6 +92,25 @@
             "total": "total",
             "value":"R$ {{value}}"
         }
+    },
+    "detailedStatement": {
+      "title": "Extrato detalhado",
+      "reservation": "Reserva ",
+      "invoiced": "FATURADO",
+      "reversed": "ESTORNADO",
+      "receivedIn": "Recebido em",
+      "payments": {
+        "deposit": "Depósito",
+        "money": "Dinheiro",
+        "debitCard": "Cartão de Débito",
+        "creditCard": "Cartão de Crédito",
+        "ticket": "Boleto"
+      },
+      "reversedBy": "Estornado por",
+      "reversedIn": "Estornado em",
+      "receivedBy": "Recebido por",
+      "parcel": "Parcela"
+
     }
   }
   

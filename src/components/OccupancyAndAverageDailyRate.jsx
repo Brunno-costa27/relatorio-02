@@ -31,9 +31,9 @@ export function OccupancyAndAverageDailyRate({t, language, periodReport, periodA
             <table className="table-fixed flex flex-col">
                 <thead className="flex text-center text-xs">
                     <tr className="w-full flex justify-center items-center">
-                        <th className="w-full text-left font-bold text-black border-y border-b-0 border-gray-200 px-4 py-2">Data</th>
-                        <th className="w-full text-center font-bold text-black border-y border-b-0 border-gray-200 px-4 py-2">Ocupaçao</th>
-                        <th className="w-full text-center font-bold text-black border-y border-b-0 border-gray-200 px-4 py-2">Diária Média</th>
+                        <th className="w-full text-left font-bold text-black border-y border-b-0 border-gray-200 px-4 py-2">{t('occupationAndAverageDailyRate.header.date')}</th>
+                        <th className="w-full text-center font-bold text-black border-y border-b-0 border-gray-200 px-4 py-2">{t('occupationAndAverageDailyRate.header.occupation')}</th>
+                        <th className="w-full text-center font-bold text-black border-y border-b-0 border-gray-200 px-4 py-2">{t('occupationAndAverageDailyRate.header.averageDailyRate')}</th>
 
                     </tr>
                 </thead>

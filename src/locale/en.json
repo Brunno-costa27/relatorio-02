@@ -49,6 +49,13 @@
       }
     },
     "occupationAndAverageDailyRate": {
+      "title": "occupation And Average Daily Rate",
+      "header": {
+        "date": "Date",
+        "occupation": "Occupation",
+        "averageDailyRate": "Average Daily Rate"
+
+      },
       "averageDailyRate": {
         "value": "$ {{value}}"
       },
@@ -83,6 +90,24 @@
             "total": "total",
             "value":"$ {{value}}"
         }
+    },
+    "detailedStatement": {
+      "title": "Detailed Statement",
+      "reservation": "Reservation",
+      "invoiced": "INVOICED",
+      "reversed": "REVERSED",
+      "receivedIn": "Received In",
+      "payments": {
+        "deposit": "Deposit",
+        "money": "Money",
+        "debitCard": "Debit Card",
+        "creditCard": "Credit Card",
+        "ticket": "Ticket"
+      },
+      "reversedBy": "Reversed By",
+      "reversedIn": "Reversed In",
+      "receivedBy":"Received By",
+      "parcel": "Parcel"
     }
 
   }

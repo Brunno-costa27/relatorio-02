@@ -55,7 +55,7 @@ function App() {
       <OccupancyAndAverageDailyRate t={t} language={language} periodReport={periodReport} periodAvg={periodAvg} />
       <Outlay t={t} language={language}  spending={spending} />
       <Sales t={t} language={language}  commerce={commerce} />
-      <DetailedStatement bookings={bookings} />
+      <DetailedStatement t={t} language={language} bookings={bookings} />
     </>
   )
 }

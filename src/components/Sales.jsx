@@ -1,10 +1,26 @@
 import { AiOutlineDeploymentUnit } from "react-icons/ai";
 import { BsCalendar4 } from "react-icons/bs";
 import { PiBag } from "react-icons/pi";
-import { formatNumber, sum } from "../functions/functions";
+import { formatNumber, sum, formatNumberByLanguage } from "../functions/functions";
+import moment from 'moment';
+
 
 export function Sales({t, language, commerce}) {
 
+    
+    // Teste
+    let number = 20
+    console.log(language);
+    if (language === 'en-US') {
+        let currency = 'USD'
+        console.log(formatNumberByLanguage(number, currency, language))
+
+    } else if (language === 'pt-br') {
+        let currency = 'BRL'
+        console.log(formatNumberByLanguage(number, currency, language))
+
+    }
+      
 
     return (
 

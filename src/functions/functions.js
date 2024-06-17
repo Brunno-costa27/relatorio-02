@@ -38,6 +38,27 @@ function formatNumber(num){
     const result = num1 + num2;
     return result;
   }
+
+  function formatNumberCoin(num, currency){
+    return num?.toLocaleString('pt-BR', {  style: "currency", currency: "BRL"})
+  }
+
+  
+  function formatNumberByLanguage(num, currency, locale) {
+
+  //   const localeCurrencyMap = {
+  //     "pt-BR": "BRL",
+  //     "en-US": "USD",
+  //     "en-GB": "GBP",
+  //     "ja-JP": "JPY",
+  //     "de-DE": "EUR",
+  //     "fr-FR": "EUR",
+  //     "es-ES": "EUR",
+  // };
+   
+    // const currency = localeCurrencyMap[locale] || "BRL"; 
+    return num?.toLocaleString(locale, { style: "currency", currency: currency });
+}
   
   
     
@@ -47,6 +68,8 @@ function formatNumber(num){
       separateWords,
       formatNumberUSD,
       obterDiaSemana,
-      sum
+      sum,
+      formatNumberCoin,
+      formatNumberByLanguage
     }
     
