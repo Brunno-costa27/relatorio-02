@@ -5,13 +5,13 @@ import { AiOutlineBank } from "react-icons/ai";
 import { IoIosCard } from "react-icons/io";
 import { IoCardOutline } from "react-icons/io5";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import { formatNumber } from '../functions/functions'
+import { formatNumber, formatNumberByLanguage } from '../functions/functions'
 import { BsArrow90DegLeft } from "react-icons/bs";
 import moment from 'moment'
 import 'moment/dist/locale/pt-br'
 
 
-export function DetailedStatement({ t, language, bookings }) {
+export function DetailedStatement({ t, language, currency, bookings }) {
 
     moment.locale(language)
 
@@ -147,7 +147,7 @@ export function DetailedStatement({ t, language, bookings }) {
 
                             <div className="w-3/4 flex flex-col gap-2">
                                 <div className="flex justify-center items-center">
-                                    <p className="text-2xl font-extrabold">R$ {formatNumber(item.value)}</p>
+                                    <p className="text-2xl font-extrabold">{formatNumberByLanguage(item.value, currency, language)}</p>
                                 </div>
 
                                 <div className="flex flex-col justify-center items-center gap-2 text-xs">
